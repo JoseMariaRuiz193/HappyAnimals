@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/perez/StudioProjects/HappyAnimals/app/src/main/res/drawable/splashscreen.xml" value="0.1" />
+        <entry key="..\:/Users/perez/StudioProjects/HappyAnimals/app/src/main/res/layout/activity_juego_sonidos.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/perez/StudioProjects/HappyAnimals/app/src/main/res/layout/activity_main.xml" value="0.24139492753623187" />
+        <entry key="..\:/Users/perez/StudioProjects/HappyAnimals/app/src/main/res/layout/activity_main2.xml" value="0.213768115942029" />
         <entry key="..\:/Users/perez/StudioProjects/HappyAnimals/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/perez/StudioProjects/HappyAnimals/app/src/main/res/layout/activity_teoria_sonidos.xml" value="0.2463768115942029" />
       </map>
     </option>
   </component>

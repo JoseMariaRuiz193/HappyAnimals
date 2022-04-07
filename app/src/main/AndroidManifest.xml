@@ -10,14 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyAnimals">
         <activity
-            android:name=".MainActivity2"
+            android:name=".JuegoSonidos"
             android:exported="false"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".TeoriaSonidos"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="landscape">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
