@@ -22,7 +22,7 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     fun irPantallaTeoriaSonidos() {
-        val pantallaTeoriaSonidos = Intent(this, TeoriaSonidos::class.java)
+        val pantallaTeoriaSonidos = Intent(this, AllAnimals::class.java)
         startActivity(pantallaTeoriaSonidos)
     }
 

@@ -13,6 +13,7 @@
         android:layout_marginTop="124dp"
         android:layout_marginEnd="92dp"
         android:layout_marginBottom="124dp"
+        android:contentDescription="vaca"
         android:onClick="onClickJuegoSonidos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,17 +24,18 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="171dp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="112dp"
         android:layout_marginBottom="113dp"
+        android:contentDescription="animales"
         android:onClick="onClickTeoriaSonidos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:shapeAppearanceOverlay="@style/circular"
-        app:srcCompat="@drawable/vaca1" />
+        app:srcCompat="@drawable/animales" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyAnimals">
         <activity
+            android:screenOrientation="landscape"
+            android:name=".AllAnimals"
+            android:exported="false" />
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".MenuPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".JuegoSonidos"
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".TeoriaSonidos"
             android:exported="false"

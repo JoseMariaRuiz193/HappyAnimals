@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout-sw600dp/activity_main2.xml" value="0.15846994535519127" />
+        <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout-sw600dp/activity_menu_principal.xml" value="0.12" />
         <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout-sw600dp/activity_teoria_sonidos.xml" value="0.15846994535519127" />
+        <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_all_animals.xml" value="0.22" />
         <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_juego_sonidos.xml" value="0.15052083333333333" />
         <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_main2.xml" value="0.15052083333333333" />
+        <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_menu_principal.xml" value="0.1" />
         <entry key="..\:/Users/josea/AndroidStudioProjects/HappyAnimals/app/src/main/res/layout/activity_teoria_sonidos.xml" value="0.33" />
       </map>
     </option>
