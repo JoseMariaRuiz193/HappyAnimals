@@ -10,13 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyAnimals">
         <activity
-            android:screenOrientation="landscape"
-            android:name=".AllAnimals"
+            android:name=".PerroActivity"
             android:exported="false" />
         <activity
-            android:screenOrientation="landscape"
-            android:name=".MenuPrincipal"
+            android:name=".GatoActivity"
             android:exported="false" />
+        <activity
+            android:name=".GalloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VacaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RanaActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AllAnimals"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MenuPrincipal"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".JuegoSonidos"
             android:exported="false"
@@ -24,7 +40,9 @@
         <activity
             android:name=".TeoriaSonidos"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AllAnimals"
+            />
         <activity
             android:name=".MainActivity2"
             android:exported="false"

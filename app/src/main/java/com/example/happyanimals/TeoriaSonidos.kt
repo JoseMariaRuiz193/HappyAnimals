@@ -1,15 +1,18 @@
 package com.example.happyanimals
 
+import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.DisplayMetrics
+import android.view.Display
 import android.view.WindowManager
 import android.widget.ImageButton
 import android.widget.Toast
 
 
-class TeoriaSonidos : AppCompatActivity() {
+class TeoriaSonidos : Activity() {
 
 
     private lateinit var cerdoPlayButton: ImageButton
@@ -18,20 +21,44 @@ class TeoriaSonidos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_teoria_sonidos)
+        val img= findViewById<ImageButton>(R.id.cerdoPlayButton)
 
+        val extras = intent.getExtras()
+        if(extras !=null ){
+            val last_pictures : Int = extras?.getInt("data")
+            val transName : String = extras?.getString( "data2", "")
+            if(last_pictures != null && transName != "")
+                img.setImageResource(last_pictures)
+            img.transitionName = transName
+        }
         cerdoPlayButton = findViewById(R.id.cerdoPlayButton)
         mediaPlayer = MediaPlayer.create(this, R.raw.cerdo)
 
         setOnClickListeners(this)
-        supportActionBar?.hide()
+        //supportActionBar?.hide()
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
+        //Pantalla flotante
+
+        val ventana = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(ventana)
+
+        val ancho = ventana.widthPixels * 0.8
+        val alto = ventana.heightPixels *0.7
+
+        window.setLayout(ancho.toInt(), alto.toInt())
+
     }
     private fun setOnClickListeners(context: Context) {
        cerdoPlayButton.setOnClickListener {
             mediaPlayer.start()
-            Toast.makeText(context, "Reproduciendo...", Toast.LENGTH_SHORT).show()
+
         }
 
 
+    }
+
+    override fun onBackPressed(){
+        mediaPlayer.stop()
     }
 }
