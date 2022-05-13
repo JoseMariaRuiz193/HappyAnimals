@@ -7,7 +7,7 @@
     tools:context=".JuegoMemoryActivity">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv_p1"
         android:layout_width="72dp"
         android:layout_height="43dp"
         android:layout_marginStart="10dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_p2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

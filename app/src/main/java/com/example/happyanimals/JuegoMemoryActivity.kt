@@ -3,10 +3,8 @@ package com.example.happyanimals
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.TextureView
 import android.view.View
 import android.view.WindowManager
-import android.widget.ImageView
 import android.widget.TextView
 
 class JuegoMemoryActivity : AppCompatActivity() {
@@ -21,8 +19,8 @@ class JuegoMemoryActivity : AppCompatActivity() {
         supportActionBar?.hide()
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-        textView1 = findViewById(R.id.textView1)
-        textView2 = findViewById(R.id.textView2)
+        textView1 = findViewById(R.id.tv_p1)
+        textView2 = findViewById(R.id.tv_p2)
 
     }
 

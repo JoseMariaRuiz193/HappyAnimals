@@ -23,13 +23,6 @@ class AllAnimals : AppCompatActivity() {
         img.setOnClickListener{ pulsarAnimal(source1, "fade1",sonidoCerdo)  }
 
 
-        val img2 = findViewById<ImageView>(R.id.imageButtonRana)
-        val source2 = R.drawable.rana
-        val sonidoRana =  R.raw.rana
-        img2.setImageResource(source2)
-        img2.setOnClickListener{
-            pulsarAnimal(source2, "fade2", sonidoRana)
-        }
         val img3 = findViewById<ImageView>(R.id.imageButtonVaca)
         val source3 = R.drawable.vaca
         val sonidoVaca = R.raw.vaca

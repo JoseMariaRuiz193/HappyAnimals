@@ -12,8 +12,8 @@
         android:id="@+id/imageButtonVolver"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@color/white"
         android:contentDescription="volverBoton"
         android:onClick="returnVolver"
@@ -23,32 +23,17 @@
         app:srcCompat="@drawable/returnvolver" />
 
     <ImageButton
-
-        android:id="@+id/imageButtonRana"
-        android:layout_width="145dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="ranaImg"
-        android:scaleType="fitXY"
-        android:transitionName="fade2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonCerdo"
-        app:srcCompat="@drawable/rana" />
-
-    <ImageButton
         android:id="@+id/imageButtonGato"
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="84dp"
         android:background="@android:color/transparent"
         android:contentDescription="gatoImg"
         android:scaleType="fitXY"
         android:transitionName="fade5"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonRana"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonPerro"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPato"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gato" />
 
     <ImageButton
@@ -56,14 +41,14 @@
 
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
         android:background="@android:color/transparent"
         android:contentDescription="perroImg"
         android:scaleType="fitXY"
         android:transitionName="fade4"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonCerdo"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonVolver"
         app:srcCompat="@drawable/perro" />
 
     <ImageButton
@@ -71,14 +56,14 @@
 
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="43dp"
         android:background="@android:color/transparent"
         android:contentDescription="ovejaImg"
         android:scaleType="fitXY"
         android:transitionName="fade9"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonPato"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonGato"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonBurro"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonGallo"
         app:srcCompat="@drawable/oveja" />
 
     <ImageButton
@@ -86,14 +71,14 @@
 
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="84dp"
         android:background="@android:color/transparent"
         android:contentDescription="patoImg"
         android:scaleType="fitXY"
         android:transitionName="fade6"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonVaca"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonGato"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPerro"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pato" />
 
     <ImageButton
@@ -101,14 +86,14 @@
 
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
         android:background="@android:color/transparent"
         android:contentDescription="vacaImg"
         android:scaleType="fitXY"
         android:transitionName="fade3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonRana"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPerro"
         app:srcCompat="@drawable/vaca" />
 
     <ImageButton
@@ -116,14 +101,14 @@
 
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="43dp"
         android:background="@android:color/transparent"
         android:contentDescription="burroImg"
         android:scaleType="fitXY"
         android:transitionName="fade7"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonPerro"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCerdo"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonGato"
         app:srcCompat="@drawable/burro640" />
 
     <ImageButton
@@ -131,28 +116,28 @@
 
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="84dp"
         android:background="@android:color/transparent"
         android:contentDescription="galloImg"
         android:scaleType="fitXY"
         android:transitionName="fade8"
         app:layout_constraintStart_toEndOf="@+id/imageButtonGato"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonBurro"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gallo" />
 
     <ImageButton
         android:id="@+id/imageButtonCerdo"
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="43dp"
         android:background="@android:color/transparent"
         android:contentDescription="cerdoImg"
         android:scaleType="fitXY"
         android:transitionName="fade1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonVaca"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPato"
         app:srcCompat="@drawable/cerdo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

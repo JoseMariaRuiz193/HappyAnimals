@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         Glide.with(this).load(R.drawable.splash).into(logo)
         cambiarActivity()
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.ringtonesdarthvader)
+        mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
         mediaPlayer.start()
     }
 
