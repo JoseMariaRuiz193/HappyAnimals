@@ -18,10 +18,11 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         supportActionBar?.hide()
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        }
 
-
-
-    }
+        }
 
     fun onClickTeoriaSonidos(view: View){
         irPantallaTeoriaSonidos()

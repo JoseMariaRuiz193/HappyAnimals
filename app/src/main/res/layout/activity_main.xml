@@ -6,40 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_p2"
-        android:layout_width="243dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="180dp"
-        android:text="Happy"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="54sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="243dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="495dp"
-        android:layout_marginTop="180dp"
-        android:text="Animals"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="54sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/giflogo"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splash" />
+        app:srcCompat="@drawable/happyanimalssplash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

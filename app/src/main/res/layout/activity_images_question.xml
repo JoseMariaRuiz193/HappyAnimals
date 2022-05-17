@@ -13,10 +13,9 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="700dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="80dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="10dp"
-        android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="4"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,45 +24,41 @@
         <ImageView
             android:id="@+id/question1"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question2"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question3"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question4"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" /><![CDATA[
-
-        >
-    ]]>
+            android:src="@drawable/cartajuego" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="700dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="36dp"
-        android:layout_weight="1"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal"
         android:weightSum="4"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,44 +67,42 @@
         <ImageView
             android:id="@+id/question5"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question6"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question7"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question8"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
-        >
+            android:src="@drawable/cartajuego" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="700dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="80dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
         android:layout_marginBottom="10dp"
-        android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="4"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,35 +111,34 @@
         <ImageView
             android:id="@+id/question9"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question10"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question11"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
+            android:src="@drawable/cartajuego" />
 
         <ImageView
             android:id="@+id/question12"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/question" />
-        >
+            android:src="@drawable/cartajuego" />
     </LinearLayout>
 
 

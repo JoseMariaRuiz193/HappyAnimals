@@ -1,6 +1,9 @@
 package com.example.happyanimals;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
@@ -15,20 +18,20 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class prueba extends AppCompatActivity{
+public class pruebajava extends AppCompatActivity{
 
     TextView tv_p1, tv_p2;
 
-ImageView question1, question2, question3,question4,
-        question5,question6,question7,question8,
-        question9, question10, question11, question12 ;
+    ImageView question1, question2, question3,question4,
+            question5,question6,question7,question8,
+            question9, question10, question11, question12 ;
 
-//array de imagenes
-Integer [] cartasArray = {101,102,103,104,105,106,201,202,203,204,205,206};
+    //array de imagenes
+    Integer [] cartasArray = {101,102,103,104,105,106,201,202,203,204,205,206};
 
-//imagenes actuales
+    //imagenes actuales
     int image101, image102, image103, image104, image105, image106,
-     image201, image202, image203, image204, image205, image206;
+            image201, image202, image203, image204, image205, image206;
 
     int firstCard, secondCard;
     int clickedFirst, clickedSecond;
@@ -240,6 +243,7 @@ Integer [] cartasArray = {101,102,103,104,105,106,201,202,203,204,205,206};
     }
 
     private void calculate (){
+        //Si la imagen es igual borrar la carta y añadir punto
         if(firstCard == secondCard){
             if(clickedFirst == 0){
                 question1.setVisibility(View.INVISIBLE);
@@ -266,9 +270,116 @@ Integer [] cartasArray = {101,102,103,104,105,106,201,202,203,204,205,206};
             }else if(clickedFirst == 11){
                 question12.setVisibility(View.INVISIBLE);
             }
+            if(clickedSecond == 0){
+                question1.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 1){
+                question2.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 2){
+                question3.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 3){
+                question4.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 4){
+                question5.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 5){
+                question6.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 6){
+                question7.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 7){
+                question8.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 8){
+                question9.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 9){
+                question10.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 10){
+                question11.setVisibility(View.INVISIBLE);
+            }else if(clickedSecond == 11){
+                question12.setVisibility(View.INVISIBLE);
+            }
+
+            //añadir punto al jugador correcto
+            if (turn ==1) {
+                playerPoints++;
+                tv_p1.setText("P1: "+ playerPoints);
+            } else if (turn ==2){
+                cpuPoints++;
+                tv_p2.setText("P2: "+ cpuPoints);
+            }
+        } else {
+            question1.setImageResource(R.drawable.question);
+            question2.setImageResource(R.drawable.question);
+            question3.setImageResource(R.drawable.question);
+            question4.setImageResource(R.drawable.question);
+            question5.setImageResource(R.drawable.question);
+            question6.setImageResource(R.drawable.question);
+            question7.setImageResource(R.drawable.question);
+            question8.setImageResource(R.drawable.question);
+            question9.setImageResource(R.drawable.question);
+            question11.setImageResource(R.drawable.question);
+            question12.setImageResource(R.drawable.question);
+//cambiar el turno de jugadores
+            if (turn == 1) {
+                turn = 2;
+                tv_p1.setTextColor(Color.GRAY);
+                tv_p2.setTextColor(Color.BLUE);
+            } else if (turn == 2) {
+                turn = 1;
+                tv_p1.setTextColor(Color.GRAY);
+                tv_p2.setTextColor(Color.BLUE);
+            }
         }
+
+        question1.setEnabled(true);
+        question2.setEnabled(true);
+        question3.setEnabled(true);
+        question4.setEnabled(true);
+        question5.setEnabled(true);
+        question6.setEnabled(true);
+        question7.setEnabled(true);
+        question8.setEnabled(true);
+        question9.setEnabled(true);
+        question10.setEnabled(true);
+        question11.setEnabled(true);
+        question12.setEnabled(true);
+
+        //checkEnd();
     }
 
+    private void checkEnd(){
+        if (question1.getVisibility() == View.INVISIBLE &&
+                question2.getVisibility() == View.INVISIBLE &&
+                question3.getVisibility() == View.INVISIBLE &&
+                question4.getVisibility() == View.INVISIBLE &&
+                question5.getVisibility() == View.INVISIBLE &&
+                question6.getVisibility() == View.INVISIBLE &&
+                question7.getVisibility() == View.INVISIBLE &&
+                question8.getVisibility() == View.INVISIBLE &&
+                question9.getVisibility() == View.INVISIBLE &&
+                question10.getVisibility() == View.INVISIBLE &&
+                question11.getVisibility() == View.INVISIBLE &&
+                question12.getVisibility() == View.INVISIBLE
+        ) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(pruebajava.this);
+            alertDialogBuilder
+                    .setMessage("GAME OVER!\n P1: " + playerPoints + "\nP2: "+cpuPoints)
+                    .setCancelable(false)
+                    .setPositiveButton("NEW", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(getApplicationContext(), pruebajava.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        }
+    }
     private void frontOfCardsResources(){
         image101 = R.drawable.perro;
         image102 = R.drawable.gato;

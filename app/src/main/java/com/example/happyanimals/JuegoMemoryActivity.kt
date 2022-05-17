@@ -13,6 +13,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
     private lateinit var textView2: TextView
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_juego_memory)

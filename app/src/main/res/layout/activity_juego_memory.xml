@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".JuegoMemoryActivity">
 
     <TextView
@@ -32,25 +33,147 @@
 
     <ImageButton
         android:id="@+id/imageButtonVolver"
-        android:layout_width="70dp"
+        android:layout_width="85dp"
         android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="164dp"
-        android:background="@color/white"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="196dp"
+        android:background="@android:color/transparent"
         android:contentDescription="volverBoton"
         android:onClick="returnVolver"
-        android:scaleType="fitXY"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/returnvolver" />
+        app:srcCompat="@drawable/back" />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/activity_images_question"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="700dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/question1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question3"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question4"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/question5"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question6"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question7"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question8"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="700dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/question9"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question10"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question11"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+
+        <ImageView
+            android:id="@+id/question12"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/cartajuego" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
