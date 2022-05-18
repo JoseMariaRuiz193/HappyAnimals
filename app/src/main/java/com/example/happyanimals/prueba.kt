@@ -93,55 +93,55 @@ class prueba : AppCompatActivity() {
         // cambiar color player 2 (inactivo)
        tv_p2!!.setTextColor(Color.BLUE)
 
-        /*
+
        question1!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String.toInt()
+           val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question1, theCard)
         }
         question2!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?.toInt()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question2, theCard)
         }
         question3!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question3, theCard)
         }
         question4!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question4, theCard)
         }
         question5!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question5, theCard)
         }
         question6!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question6, theCard)
         }
         question7!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question7, theCard)
         }
         question8!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question8, theCard)
         }
         question9!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question9, theCard)
         }
         question10!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question10, theCard)
         }
         question11!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question11, theCard)
         }
         question12!!.setOnClickListener { v ->
-            val theCard: Int = v.tag as String?. toInt ()
+            val theCard: Int = Integer.parseInt(v.tag as String?)
             doStuff(question12, theCard)
-        }*/
+        }
     }
 
     private fun doStuff(iv: ImageView?, card: Int) {
@@ -270,17 +270,17 @@ class prueba : AppCompatActivity() {
                 tv_p2!!.text = "P2: $cpuPoints"
             }
         } else {
-            question1!!.setImageResource(R.drawable.question)
-            question2!!.setImageResource(R.drawable.question)
-            question3!!.setImageResource(R.drawable.question)
-            question4!!.setImageResource(R.drawable.question)
-            question5!!.setImageResource(R.drawable.question)
-            question6!!.setImageResource(R.drawable.question)
-            question7!!.setImageResource(R.drawable.question)
-            question8!!.setImageResource(R.drawable.question)
-            question9!!.setImageResource(R.drawable.question)
-            question11!!.setImageResource(R.drawable.question)
-            question12!!.setImageResource(R.drawable.question)
+            question1!!.setImageResource(R.drawable.cartajuego)
+            question2!!.setImageResource(R.drawable.cartajuego)
+            question3!!.setImageResource(R.drawable.cartajuego)
+            question4!!.setImageResource(R.drawable.cartajuego)
+            question5!!.setImageResource(R.drawable.cartajuego)
+            question6!!.setImageResource(R.drawable.cartajuego)
+            question7!!.setImageResource(R.drawable.cartajuego)
+            question8!!.setImageResource(R.drawable.cartajuego)
+            question9!!.setImageResource(R.drawable.cartajuego)
+            question11!!.setImageResource(R.drawable.cartajuego)
+            question12!!.setImageResource(R.drawable.cartajuego)
             //cambiar el turno de jugadores
             if (turn == 1) {
                 turn = 2

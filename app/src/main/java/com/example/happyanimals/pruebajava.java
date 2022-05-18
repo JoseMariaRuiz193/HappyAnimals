@@ -305,17 +305,17 @@ public class pruebajava extends AppCompatActivity{
                 tv_p2.setText("P2: "+ cpuPoints);
             }
         } else {
-            question1.setImageResource(R.drawable.question);
-            question2.setImageResource(R.drawable.question);
-            question3.setImageResource(R.drawable.question);
-            question4.setImageResource(R.drawable.question);
-            question5.setImageResource(R.drawable.question);
-            question6.setImageResource(R.drawable.question);
-            question7.setImageResource(R.drawable.question);
-            question8.setImageResource(R.drawable.question);
-            question9.setImageResource(R.drawable.question);
-            question11.setImageResource(R.drawable.question);
-            question12.setImageResource(R.drawable.question);
+            question1.setImageResource(R.drawable.cartajuego);
+            question2.setImageResource(R.drawable.cartajuego);
+            question3.setImageResource(R.drawable.cartajuego);
+            question4.setImageResource(R.drawable.cartajuego);
+            question5.setImageResource(R.drawable.cartajuego);
+            question6.setImageResource(R.drawable.cartajuego);
+            question7.setImageResource(R.drawable.cartajuego);
+            question8.setImageResource(R.drawable.cartajuego);
+            question9.setImageResource(R.drawable.cartajuego);
+            question11.setImageResource(R.drawable.cartajuego);
+            question12.setImageResource(R.drawable.cartajuego);
 //cambiar el turno de jugadores
             if (turn == 1) {
                 turn = 2;

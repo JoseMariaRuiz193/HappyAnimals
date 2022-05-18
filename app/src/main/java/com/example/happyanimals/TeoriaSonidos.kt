@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.WindowManager
 import android.widget.ImageButton
+import android.widget.TextView
 
 
 class TeoriaSonidos : Activity() {
@@ -19,14 +20,19 @@ class TeoriaSonidos : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_teoria_sonidos)
         val img= findViewById<ImageButton>(R.id.playButton)
+        val cajaNombre = findViewById<TextView>(R.id.textViewNombreAnimal)
         var sonidoRecogido = 0
         val extras = intent.getExtras()
         if(extras !=null ){
             val last_pictures : Int = extras?.getInt("data")
             val transName : String = extras?.getString( "data2", "")
             sonidoRecogido = extras?.getInt( "sonido", 0)
-            if(last_pictures != null && transName != "")
+            val nombreAnimal : String = extras?.getString( "nombresAnimals", "")
+            if(last_pictures != null && transName != "" && nombreAnimal !=null){
                 img.setImageResource(last_pictures)
+                cajaNombre.text = nombreAnimal
+            }
+
             img.transitionName = transName
         }
         playButton = findViewById(R.id.playButton)
