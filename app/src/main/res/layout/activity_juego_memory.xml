@@ -9,11 +9,10 @@
 
     <TextView
         android:id="@+id/tv_p1"
-        android:layout_width="72dp"
-        android:layout_height="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
-        android:text="P1: 0"
         android:textColor="@color/black"
         android:textSize="32dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,155 +24,192 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="340dp"
-        android:text="P2: 0"
         android:textColor="@color/black"
         android:textSize="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButtonVolver"
-        android:layout_width="85dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="196dp"
+        android:id="@+id/imageButtonBack"
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="600dp"
+        android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
-        android:contentDescription="volverBoton"
+        android:contentDescription="botonback"
         android:onClick="returnVolver"
-        android:scaleType="fitCenter"
+        android:scaleType="fitXY"
+        android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        tools:ignore="TouchTargetSizeCheck" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="700dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="4"
+    <ImageButton
+        android:id="@+id/question1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question1"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
-
-        <ImageView
-            android:id="@+id/question2"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
-
-        <ImageView
-            android:id="@+id/question3"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
-
-        <ImageView
-            android:id="@+id/question4"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="700dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="4"
+    <ImageButton
+        android:id="@+id/question5"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/question1"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question5"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
+    <ImageButton
+        android:id="@+id/question9"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question5"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question6"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
+    <ImageButton
+        android:id="@+id/question11"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question10"
+        app:layout_constraintTop_toBottomOf="@+id/question7"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question7"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
+    <ImageButton
+        android:id="@+id/question4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonBack"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question8"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/question6"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question5"
+        app:layout_constraintTop_toBottomOf="@+id/question2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="700dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <ImageButton
+        android:id="@+id/question7"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question6"
+        app:layout_constraintTop_toBottomOf="@+id/question3"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question9"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
+    <ImageButton
+        android:id="@+id/question8"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question7"
+        app:layout_constraintTop_toBottomOf="@+id/question4"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question10"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
+    <ImageButton
+        android:id="@+id/question12"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question11"
+        app:layout_constraintTop_toBottomOf="@+id/question8"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question11"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
+    <ImageButton
+        android:id="@+id/question10"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question9"
+        app:layout_constraintTop_toBottomOf="@+id/question6"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/question12"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/cartajuego" />
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/question3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/question2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cartajuego"
+        app:layout_constraintStart_toEndOf="@+id/question1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

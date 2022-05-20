@@ -15,8 +15,8 @@ import java.util.*
 
 class JuegoMemoryActivity : AppCompatActivity() {
 
-    var tv_p1: TextView? = null
-    var tv_p2: TextView? = null
+   // var tv_p1: TextView? = null
+   // var tv_p2: TextView? = null
     var question1: ImageView? = null
     var question2: ImageView? = null
     var question3: ImageView? = null
@@ -59,8 +59,8 @@ class JuegoMemoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_juego_memory)
         supportActionBar?.hide()
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        tv_p1 = findViewById<View>(R.id.tv_p1) as TextView
-        tv_p2 = findViewById<View>(R.id.tv_p2) as TextView
+       // tv_p1 = findViewById<View>(R.id.tv_p1) as TextView
+       // tv_p2 = findViewById<View>(R.id.tv_p2) as TextView
         question1 = findViewById<View>(R.id.question1) as ImageView
         question2 = findViewById<View>(R.id.question2) as ImageView
         question3 = findViewById<View>(R.id.question3) as ImageView
@@ -93,7 +93,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
         Collections.shuffle(Arrays.asList(cartasArray))
 
         // cambiar color player 2 (inactivo)
-        tv_p2!!.setTextColor(Color.BLUE)
+      //  tv_p2!!.setTextColor(Color.BLUE)
 
 
         question1!!.setOnClickListener { v ->
@@ -264,13 +264,13 @@ class JuegoMemoryActivity : AppCompatActivity() {
             }
 
             //añadir punto al jugador correcto
-            if (turn == 1) {
+           /* if (turn == 1) {
                 playerPoints++
                 tv_p1!!.text = "P1: $playerPoints"
             } else if (turn == 2) {
                 cpuPoints++
                 tv_p2!!.text = "P2: $cpuPoints"
-            }
+            }*/
         } else {
             question1!!.setImageResource(R.drawable.cartajuego)
             question2!!.setImageResource(R.drawable.cartajuego)
@@ -284,7 +284,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
             question11!!.setImageResource(R.drawable.cartajuego)
             question12!!.setImageResource(R.drawable.cartajuego)
             //cambiar el turno de jugadores
-            if (turn == 1) {
+           /* if (turn == 1) {
                 turn = 2
                 tv_p1!!.setTextColor(Color.GRAY)
                 tv_p2!!.setTextColor(Color.BLUE)
@@ -292,7 +292,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
                 turn = 1
                 tv_p1!!.setTextColor(Color.GRAY)
                 tv_p2!!.setTextColor(Color.BLUE)
-            }
+            }*/
         }
         question1!!.isEnabled = true
         question2!!.isEnabled = true
@@ -314,7 +314,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
         if (question1!!.visibility == View.INVISIBLE && question2!!.visibility == View.INVISIBLE && question3!!.visibility == View.INVISIBLE && question4!!.visibility == View.INVISIBLE && question5!!.visibility == View.INVISIBLE && question6!!.visibility == View.INVISIBLE && question7!!.visibility == View.INVISIBLE && question8!!.visibility == View.INVISIBLE && question9!!.visibility == View.INVISIBLE && question10!!.visibility == View.INVISIBLE && question11!!.visibility == View.INVISIBLE && question12!!.visibility == View.INVISIBLE) {
             val alertDialogBuilder = AlertDialog.Builder(this@JuegoMemoryActivity)
             alertDialogBuilder
-                .setMessage("GAME OVER!\n P1: $playerPoints\nP2: $cpuPoints")
+                .setMessage("CONGRATULATIONS!!!")
                 .setCancelable(false)
                 .setPositiveButton("NEW") { dialogInterface, i ->
                     val intent = Intent(applicationContext, prueba::class.java)
@@ -328,18 +328,18 @@ class JuegoMemoryActivity : AppCompatActivity() {
     }
 
     private fun frontOfCardsResources() {
-        image101 = R.drawable.perro
-        image102 = R.drawable.gato
-        image103 = R.drawable.vaca
-        image104 = R.drawable.cerdo
-        image105 = R.drawable.gallo
-        image106 = R.drawable.oveja
-        image201 = R.drawable.perro
-        image202 = R.drawable.gato
-        image203 = R.drawable.vaca
-        image204 = R.drawable.cerdo
-        image205 = R.drawable.gallo
-        image206 = R.drawable.oveja
+        image101 = R.drawable.dogcard
+        image102 = R.drawable.catcard
+        image103 = R.drawable.cowcard
+        image104 = R.drawable.pigcard
+        image105 = R.drawable.chickencard
+        image106 = R.drawable.sheepcard
+        image201 = R.drawable.dogcard
+        image202 = R.drawable.catcard
+        image203 = R.drawable.cowcard
+        image204 = R.drawable.pigcard
+        image205 = R.drawable.chickencard
+        image206 = R.drawable.sheepcard
     }
     fun returnVolver(view: View){
         irPantallaJuegoSonidos()

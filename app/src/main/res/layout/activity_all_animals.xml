@@ -77,22 +77,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:src="@drawable/perro"
         android:id="@+id/imageButtonPerro"
         android:layout_width="105dp"
-        android:layout_height="106dp"
+        android:layout_height="115dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="92dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonperro"
         android:scaleType="fitXY"
+        android:src="@drawable/perro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButtonGato"
-        android:layout_width="85dp"
-        android:layout_height="95dp"
+        android:layout_width="75dp"
+        android:layout_height="120dp"
         android:layout_marginStart="264dp"
         android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
