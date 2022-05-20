@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         val logo = findViewById<ImageView>(R.id.giflogo)
-        Glide.with(this).load(R.drawable.happyanimalssplash).into(logo)
+        Glide.with(this).load(R.drawable.splashhappyanimals).into(logo)
         cambiarActivity()
 
         mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)

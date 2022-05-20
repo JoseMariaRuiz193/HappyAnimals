@@ -45,8 +45,8 @@ public class pruebajava extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_memory);
 
-        tv_p1 = (TextView) findViewById(R.id.tv_p1);
-        tv_p2 = (TextView) findViewById(R.id.tv_p2);
+      //  tv_p1 = (TextView) findViewById(R.id.tv_p1);
+       // tv_p2 = (TextView) findViewById(R.id.tv_p2);
 
         question1 = (ImageView) findViewById(R.id.question1);
         question2 = (ImageView) findViewById(R.id.question2);

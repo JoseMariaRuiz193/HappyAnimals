@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AllAnimals"
+    android:background="@drawable/fondo"
     >
 
     <ImageButton
@@ -16,6 +17,8 @@
         android:layout_marginTop="276dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonoveja"
+        android:scaleType="fitXY"
+        android:src="@drawable/oveja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,11 +26,13 @@
         android:id="@+id/imageButtonBack"
         android:layout_width="110dp"
         android:layout_height="25dp"
-        android:layout_marginStart="615dp"
+        android:layout_marginStart="600dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonback"
         android:onClick="returnVolver"
+        android:scaleType="fitXY"
+        android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
@@ -36,10 +41,12 @@
         android:id="@+id/imageButtonCerdo"
         android:layout_width="121dp"
         android:layout_height="118dp"
-        android:layout_marginStart="384dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginStart="404dp"
+        android:layout_marginTop="236dp"
         android:background="@android:color/transparent"
         android:contentDescription="botoncerdo"
+        android:scaleType="fitXY"
+        android:src="@drawable/cerdo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,14 +54,17 @@
         android:id="@+id/imageButtonVaca"
         android:layout_width="116dp"
         android:layout_height="124dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="236dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonvaca"
+        android:scaleType="fitXY"
+        android:src="@drawable/vaca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:src="@drawable/burro"
         android:id="@+id/imageButtonBurro"
         android:layout_width="126dp"
         android:layout_height="123dp"
@@ -62,10 +72,12 @@
         android:layout_marginTop="252dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonBurro"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
+        android:src="@drawable/perro"
         android:id="@+id/imageButtonPerro"
         android:layout_width="105dp"
         android:layout_height="106dp"
@@ -73,17 +85,20 @@
         android:layout_marginTop="92dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonperro"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButtonGato"
-        android:layout_width="101dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="85dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
         android:contentDescription="botongato"
+        android:scaleType="fitXY"
+        android:src="@drawable/gato"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,10 +106,12 @@
         android:id="@+id/imageButtonGallo"
         android:layout_width="98dp"
         android:layout_height="109dp"
-        android:layout_marginStart="568dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="584dp"
+        android:layout_marginTop="64dp"
         android:background="@android:color/transparent"
         android:contentDescription="botongallo"
+        android:scaleType="fitXY"
+        android:src="@drawable/gallo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,19 +119,13 @@
         android:id="@+id/imageButtonPato"
         android:layout_width="104dp"
         android:layout_height="122dp"
-        android:layout_marginStart="416dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="436dp"
+        android:layout_marginTop="92dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonpato"
+        android:scaleType="fitXY"
+        android:src="@drawable/pato"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/allanimalsteoria" />
 </androidx.constraintlayout.widget.ConstraintLayout>

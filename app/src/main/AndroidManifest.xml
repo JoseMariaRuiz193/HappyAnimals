@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyAnimals">
         <activity
+            android:name=".SplashScreen"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
             android:name=".ImagesQuestionActivity"
             android:exported="false" />
         <activity

@@ -57,8 +57,8 @@ class prueba : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_juego_memory)
-        tv_p1 = findViewById<View>(R.id.tv_p1) as TextView
-        tv_p2 = findViewById<View>(R.id.tv_p2) as TextView
+      //  tv_p1 = findViewById<View>(R.id.tv_p1) as TextView
+       // tv_p2 = findViewById<View>(R.id.tv_p2) as TextView
         question1 = findViewById<View>(R.id.question1) as ImageView
         question2 = findViewById<View>(R.id.question2) as ImageView
         question3 = findViewById<View>(R.id.question3) as ImageView
