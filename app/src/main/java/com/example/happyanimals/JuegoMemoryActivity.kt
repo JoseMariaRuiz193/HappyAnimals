@@ -90,7 +90,15 @@ class JuegoMemoryActivity : AppCompatActivity() {
         frontOfCardsResources()
 
         //barajar imagenes
-        Collections.shuffle(Arrays.asList(cartasArray))
+        cartasArray.shuffle()
+        /*
+            var numeroRandom = (1 until 10).random()
+            var a = 0
+            while (a < numeroRandom){
+                cartasArray.shuffle()
+                a++;
+            }
+        */
 
         // cambiar color player 2 (inactivo)
       //  tv_p2!!.setTextColor(Color.BLUE)
@@ -281,6 +289,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
             question7!!.setImageResource(R.drawable.cartajuego)
             question8!!.setImageResource(R.drawable.cartajuego)
             question9!!.setImageResource(R.drawable.cartajuego)
+            question10!!.setImageResource(R.drawable.cartajuego)
             question11!!.setImageResource(R.drawable.cartajuego)
             question12!!.setImageResource(R.drawable.cartajuego)
             //cambiar el turno de jugadores
@@ -331,7 +340,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
         image101 = R.drawable.dogcard
         image102 = R.drawable.catcard
         image103 = R.drawable.cowcard
-        image104 = R.drawable.pigcard
+        image104 = R.drawable.duckcard
         image105 = R.drawable.chickencard
         image106 = R.drawable.sheepcard
         image201 = R.drawable.dogcard

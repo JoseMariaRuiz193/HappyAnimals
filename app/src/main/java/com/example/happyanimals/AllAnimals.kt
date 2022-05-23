@@ -66,7 +66,7 @@ class AllAnimals : AppCompatActivity() {
         val img8 = findViewById<ImageView>(R.id.imageButtonGallo)
         val source8 = R.drawable.gallo
         val sonidoGallo = R.raw.gallo
-        val nombreGallo = R.drawable.chiken
+        val nombreGallo = R.drawable.rooster
         img8.setImageResource(source8)
         img8.setOnClickListener{
             pulsarAnimal(source8, "fade8", sonidoGallo, nombreGallo)

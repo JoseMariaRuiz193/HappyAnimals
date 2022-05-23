@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondovalla"
+    android:background="@drawable/fondo"
     tools:context=".MenuJuegosActivity">
 
     <ImageButton
@@ -25,10 +25,11 @@
 
     <ImageButton
         android:id="@+id/imageButtonMemory"
-        android:layout_width="315dp"
-        android:layout_height="255dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="240dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="127dp"
+        android:background="@android:color/transparent"
         android:contentDescription="juegomemoriaboton"
         android:onClick="onClickJuegoMemory"
         android:scaleType="fitXY"
@@ -40,11 +41,12 @@
         android:id="@+id/imageButtonNumeros"
         android:layout_width="315dp"
         android:layout_height="255dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="28dp"
+        android:background="@android:color/transparent"
         android:contentDescription="juegonumeros"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/juegonumeros" />
+        app:srcCompat="@drawable/juegosonidos" />
 </androidx.constraintlayout.widget.ConstraintLayout>
