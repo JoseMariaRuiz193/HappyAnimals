@@ -1,6 +1,8 @@
 package com.example.happyanimals
 
+
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,11 +21,17 @@ class MenuJuegosActivity : AppCompatActivity() {
         val pantallaJuegoMemory = Intent ( this, JuegoMemoryActivity::class.java)
         startActivity(pantallaJuegoMemory)
     }
+    fun onClickJuegoImagenSonido(view: View) {
+        val pantallaJuegoSonido = Intent ( this, JuegoImagenSonido::class.java)
+        startActivity(pantallaJuegoSonido)
+    }
     fun returnVolver(view: View){
-        irPantallaJuegoSonidos()
+        irPantallaMenuJuegos()
+        mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
+        mediaPlayer.start()
     }
 
-    fun irPantallaJuegoSonidos() {
+    fun irPantallaMenuJuegos() {
         val pantallaJuegoSonidos = Intent(this, MainActivity2::class.java)
         startActivity(pantallaJuegoSonidos)
     }

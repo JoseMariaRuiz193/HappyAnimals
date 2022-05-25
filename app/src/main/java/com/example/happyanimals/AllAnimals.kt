@@ -1,6 +1,7 @@
 package com.example.happyanimals
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -96,6 +97,8 @@ class AllAnimals : AppCompatActivity() {
 
     fun returnVolver(view: View){
         irPantallaJuegoSonidos()
+        mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
+        mediaPlayer.start()
     }
 
     fun irPantallaJuegoSonidos() {

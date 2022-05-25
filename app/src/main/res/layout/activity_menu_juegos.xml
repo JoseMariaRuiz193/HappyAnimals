@@ -25,28 +25,29 @@
 
     <ImageButton
         android:id="@+id/imageButtonMemory"
-        android:layout_width="240dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="127dp"
+        android:layout_width="315dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="148dp"
         android:background="@android:color/transparent"
         android:contentDescription="juegomemoriaboton"
         android:onClick="onClickJuegoMemory"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/juegomemoria" />
+        app:srcCompat="@drawable/memorygame" />
 
     <ImageButton
         android:id="@+id/imageButtonNumeros"
         android:layout_width="315dp"
-        android:layout_height="255dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="28dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
         android:contentDescription="juegonumeros"
+        android:onClick="onClickJuegoImagenSonido"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/juegosonidos" />
+        app:srcCompat="@drawable/animalsounds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
