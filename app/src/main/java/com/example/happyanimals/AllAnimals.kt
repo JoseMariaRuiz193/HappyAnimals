@@ -90,19 +90,20 @@ class AllAnimals : AppCompatActivity() {
         pantallaTeoriaSonidos.putExtra( "data2", b)
         pantallaTeoriaSonidos.putExtra( "sonido", c)
         pantallaTeoriaSonidos.putExtra( "nombresAnimals", d)
-
+        mediaPlayer.pause()
 
         startActivity(pantallaTeoriaSonidos)
     }
 
     fun returnVolver(view: View){
         irPantallaJuegoSonidos()
-        mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
-        mediaPlayer.start()
+       mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
+     mediaPlayer.start()
     }
 
     fun irPantallaJuegoSonidos() {
         val pantallaJuegoSonidos = Intent(this, MainActivity2::class.java)
+        pantallaJuegoSonidos.putExtra("musica", 1)
         startActivity(pantallaJuegoSonidos)
     }
 

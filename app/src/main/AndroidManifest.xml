@@ -10,28 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyAnimals">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".JuegoImagenSonido"
             android:exported="false"
-            android:screenOrientation="landscape"/>
-        <activity
-            android:name=".ImagesQuestionActivity"
-            android:exported="false" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MenuJuegosActivity"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".JuegoMemoryActivity"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AllAnimals"
             android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".MenuPrincipal"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TeoriaSonidos"
             android:exported="false"
@@ -39,14 +40,6 @@
             android:theme="@style/Theme.AllAnimals" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".SplashScreen"
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

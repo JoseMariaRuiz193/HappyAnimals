@@ -3,6 +3,7 @@ package com.example.happyanimals
 import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -326,7 +327,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
                 .setMessage("CONGRATULATIONS!!!")
                 .setCancelable(false)
                 .setPositiveButton("NEW") { dialogInterface, i ->
-                    val intent = Intent(applicationContext, prueba::class.java)
+                    val intent = Intent(applicationContext, JuegoMemoryActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
@@ -346,16 +347,18 @@ class JuegoMemoryActivity : AppCompatActivity() {
         image201 = R.drawable.dogcard
         image202 = R.drawable.catcard
         image203 = R.drawable.cowcard
-        image204 = R.drawable.pigcard
+        image204 = R.drawable.duckcard
         image205 = R.drawable.chickencard
         image206 = R.drawable.sheepcard
     }
     fun returnVolver(view: View){
-        irPantallaJuegoSonidos()
+        irPantallaMenuJuegos()
     }
 
-    fun irPantallaJuegoSonidos() {
-        val pantallaJuegoSonidos = Intent(this, MenuJuegosActivity::class.java)
-        startActivity(pantallaJuegoSonidos)
+    fun irPantallaMenuJuegos() {
+        val pantallaMenuJuegos = Intent(this, MenuJuegosActivity::class.java)
+        startActivity(pantallaMenuJuegos)
+        mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
+        mediaPlayer.start()
     }
 }

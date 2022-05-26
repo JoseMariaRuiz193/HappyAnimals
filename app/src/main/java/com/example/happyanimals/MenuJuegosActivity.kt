@@ -12,6 +12,7 @@ class MenuJuegosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
+
         setContentView(R.layout.activity_menu_juegos)
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
@@ -20,19 +21,24 @@ class MenuJuegosActivity : AppCompatActivity() {
     fun onClickJuegoMemory(view: View) {
         val pantallaJuegoMemory = Intent ( this, JuegoMemoryActivity::class.java)
         startActivity(pantallaJuegoMemory)
+        mediaPlayer.stop()
     }
     fun onClickJuegoImagenSonido(view: View) {
         val pantallaJuegoSonido = Intent ( this, JuegoImagenSonido::class.java)
         startActivity(pantallaJuegoSonido)
+        //mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
+        mediaPlayer.stop()
+
     }
     fun returnVolver(view: View){
-        irPantallaMenuJuegos()
-        mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
-        mediaPlayer.start()
+        irPantallaPrincipal()
+     //   mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
+      //  mediaPlayer.start()
     }
 
-    fun irPantallaMenuJuegos() {
+    fun irPantallaPrincipal() {
         val pantallaJuegoSonidos = Intent(this, MainActivity2::class.java)
+        pantallaJuegoSonidos.putExtra("musica", 1)
         startActivity(pantallaJuegoSonidos)
     }
 

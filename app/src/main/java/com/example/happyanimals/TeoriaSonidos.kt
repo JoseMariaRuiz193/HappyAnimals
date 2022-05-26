@@ -28,10 +28,10 @@ class TeoriaSonidos : Activity() {
         var sonidoRecogido = 0
         val extras = intent.getExtras()
         if(extras !=null ){
-            val last_pictures : Int = extras?.getInt("data")
-            val last_pictures2 : Int = extras?.getInt("nombresAnimals")
-            val transName : String = extras?.getString( "data2", "")
-            sonidoRecogido = extras?.getInt( "sonido", 0)
+            val last_pictures : Int = extras?.getInt("data")!!
+            val last_pictures2 : Int = extras?.getInt("nombresAnimals")!!
+            val transName : String = extras?.getString( "data2", "")!!
+            sonidoRecogido = extras?.getInt( "sonido", 0)!!
            // val nombreAnimal : String = extras?.getString( "nombresAnimals", "")
             if(last_pictures != null && transName != "" && last_pictures2 !=null){
                 img.setImageResource(last_pictures)
@@ -85,11 +85,12 @@ class TeoriaSonidos : Activity() {
 
     fun returnVolver(view: View){
         onBackPressed()
+
     }
 
     override fun onBackPressed(){
         super.onBackPressed()
-        mediaPlayer.stop()
+      //  mediaPlayer.stop()
     }
 
     override fun onPause(){
