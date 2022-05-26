@@ -149,7 +149,6 @@ class JuegoImagenSonido : AppCompatActivity() {
                 crearJuego()
             }else{
                 error()
-
             }
         }
 
