@@ -20,8 +20,8 @@
 
     <ImageButton
         android:id="@+id/learnButton"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="221dp"
+        android:layout_height="41dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="260dp"
         android:background="@android:color/transparent"
@@ -30,13 +30,14 @@
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/learn" />
+        app:srcCompat="@drawable/learn"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/playJuegosButton"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="92dp"
+        android:layout_width="169dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="172dp"
         android:layout_marginTop="260dp"
         android:background="@android:color/transparent"
         android:contentDescription="playbutton"
@@ -44,5 +45,6 @@
         android:scaleType="fitXY"
         app:layout_constraintStart_toEndOf="@+id/learnButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/play" />
+        app:srcCompat="@drawable/play"
+        tools:ignore="TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

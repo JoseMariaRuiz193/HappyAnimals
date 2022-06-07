@@ -11,10 +11,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonOveja"
-        android:layout_width="115dp"
-        android:layout_height="108dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginStart="568dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="240dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonoveja"
         android:scaleType="fitXY"
@@ -24,10 +24,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonBack"
-        android:layout_width="110dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="600dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="636dp"
+        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonback"
         android:onClick="returnVolver"
@@ -39,10 +39,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonCerdo"
-        android:layout_width="121dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="404dp"
-        android:layout_marginTop="236dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="408dp"
+        android:layout_marginTop="228dp"
         android:background="@android:color/transparent"
         android:contentDescription="botoncerdo"
         android:scaleType="fitXY"
@@ -52,10 +52,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonVaca"
-        android:layout_width="116dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="236dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="240dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonvaca"
         android:scaleType="fitXY"
@@ -64,24 +64,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:src="@drawable/burro"
         android:id="@+id/imageButtonBurro"
-        android:layout_width="126dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="252dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="228dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonBurro"
         android:scaleType="fitXY"
+        android:src="@drawable/burro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButtonPerro"
-        android:layout_width="105dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="72dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonperro"
         android:scaleType="fitXY"
@@ -91,10 +91,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonGato"
-        android:layout_width="75dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="72dp"
         android:background="@android:color/transparent"
         android:contentDescription="botongato"
         android:scaleType="fitXY"
@@ -104,10 +104,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonGallo"
-        android:layout_width="98dp"
-        android:layout_height="109dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginStart="584dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="88dp"
         android:background="@android:color/transparent"
         android:contentDescription="botongallo"
         android:scaleType="fitXY"
@@ -117,10 +117,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonPato"
-        android:layout_width="104dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="436dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="424dp"
+        android:layout_marginTop="64dp"
         android:background="@android:color/transparent"
         android:contentDescription="botonpato"
         android:scaleType="fitXY"

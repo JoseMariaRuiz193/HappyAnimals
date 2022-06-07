@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.view.WindowManager
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import java.util.*
@@ -18,6 +19,8 @@ class JuegoMemoryActivity : AppCompatActivity() {
 
    // var tv_p1: TextView? = null
    // var tv_p2: TextView? = null
+
+
     var question1: ImageView? = null
     var question2: ImageView? = null
     var question3: ImageView? = null
@@ -52,9 +55,35 @@ class JuegoMemoryActivity : AppCompatActivity() {
     var clickedFirst = 0
     var clickedSecond = 0
     var cardNumber = 1
-    var turn = 1
-    var playerPoints = 0
-    var cpuPoints = 0
+   // var turn = 1
+ //   var playerPoints = 0
+  //  var cpuPoints = 0
+   //Sonidos animales recogidos en variables
+   val sBurro = R.raw.burro
+    val sGato = R.raw.gato
+    val sPerro = R.raw.perro
+    val sOveja = R.raw.oveja
+    val sGallo = R.raw.gallo
+    val sPato = R.raw.pato
+    val sVaca = R.raw.vaca
+    val sCerdo = R.raw.cerdo
+
+    private lateinit var mediaPlayer101: MediaPlayer
+    private lateinit var mediaPlayer102: MediaPlayer
+    private lateinit var mediaPlayer103: MediaPlayer
+    private lateinit var mediaPlayer104: MediaPlayer
+    private lateinit var mediaPlayer105: MediaPlayer
+    private lateinit var mediaPlayer106: MediaPlayer
+
+    private lateinit var mediaPlayer201: MediaPlayer
+    private lateinit var mediaPlayer202: MediaPlayer
+    private lateinit var mediaPlayer203: MediaPlayer
+    private lateinit var mediaPlayer204: MediaPlayer
+    private lateinit var mediaPlayer205: MediaPlayer
+    private lateinit var mediaPlayer206: MediaPlayer
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_juego_memory)
@@ -62,6 +91,14 @@ class JuegoMemoryActivity : AppCompatActivity() {
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
        // tv_p1 = findViewById<View>(R.id.tv_p1) as TextView
        // tv_p2 = findViewById<View>(R.id.tv_p2) as TextView
+        crearJuego()
+
+        val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido3)
+        botonRecarga.visibility = View.INVISIBLE
+
+    }
+
+    private fun crearJuego(){
         question1 = findViewById<View>(R.id.question1) as ImageView
         question2 = findViewById<View>(R.id.question2) as ImageView
         question3 = findViewById<View>(R.id.question3) as ImageView
@@ -92,17 +129,6 @@ class JuegoMemoryActivity : AppCompatActivity() {
 
         //barajar imagenes
         cartasArray.shuffle()
-        /*
-            var numeroRandom = (1 until 10).random()
-            var a = 0
-            while (a < numeroRandom){
-                cartasArray.shuffle()
-                a++;
-            }
-        */
-
-        // cambiar color player 2 (inactivo)
-      //  tv_p2!!.setTextColor(Color.BLUE)
 
 
         question1!!.setOnClickListener { v ->
@@ -156,30 +182,46 @@ class JuegoMemoryActivity : AppCompatActivity() {
     }
 
     private fun doStuff(iv: ImageView?, card: Int) {
+        if (cardNumber == 2) {
+            stopSounds()
+        }
+
         // imagen correcta con el imagen view
         if (cartasArray[card] == 101) {
+            mediaPlayer101.start()
             iv!!.setImageResource(image101)
         } else if (cartasArray[card] == 102) {
+            mediaPlayer102.start()
             iv!!.setImageResource(image102)
         } else if (cartasArray[card] == 103) {
+            mediaPlayer103.start()
             iv!!.setImageResource(image103)
         } else if (cartasArray[card] == 104) {
+            mediaPlayer104.start()
             iv!!.setImageResource(image104)
         } else if (cartasArray[card] == 105) {
+            mediaPlayer105.start()
             iv!!.setImageResource(image105)
         } else if (cartasArray[card] == 106) {
+            mediaPlayer106.start()
             iv!!.setImageResource(image106)
         } else if (cartasArray[card] == 201) {
+            mediaPlayer101.start()
             iv!!.setImageResource(image201)
         } else if (cartasArray[card] == 202) {
+            mediaPlayer102.start()
             iv!!.setImageResource(image202)
         } else if (cartasArray[card] == 203) {
+            mediaPlayer103.start()
             iv!!.setImageResource(image203)
         } else if (cartasArray[card] == 204) {
+            mediaPlayer104.start()
             iv!!.setImageResource(image204)
         } else if (cartasArray[card] == 205) {
+            mediaPlayer105.start()
             iv!!.setImageResource(image205)
         } else if (cartasArray[card] == 206) {
+            mediaPlayer106.start()
             iv!!.setImageResource(image206)
         }
 
@@ -193,6 +235,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
             clickedFirst = card
             iv!!.isEnabled = false
         } else if (cardNumber == 2) {
+
             secondCard = cartasArray[card]
             if (secondCard > 200) {
                 secondCard = secondCard - 100
@@ -215,11 +258,12 @@ class JuegoMemoryActivity : AppCompatActivity() {
             handler.postDelayed({ //comprobar si la imagen seleccionada es igual
                 calculate()
             }, 1000)
+            //stopSounds();
         }
     }
 
     private fun calculate() {
-        //Si la imagen es igual borrar la carta y añadir punto
+        //Si la imagen es igual borrar la carta
         if (firstCard == secondCard) {
             if (clickedFirst == 0) {
                 question1!!.visibility = View.INVISIBLE
@@ -246,6 +290,8 @@ class JuegoMemoryActivity : AppCompatActivity() {
             } else if (clickedFirst == 11) {
                 question12!!.visibility = View.INVISIBLE
             }
+
+
             if (clickedSecond == 0) {
                 question1!!.visibility = View.INVISIBLE
             } else if (clickedSecond == 1) {
@@ -272,14 +318,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
                 question12!!.visibility = View.INVISIBLE
             }
 
-            //añadir punto al jugador correcto
-           /* if (turn == 1) {
-                playerPoints++
-                tv_p1!!.text = "P1: $playerPoints"
-            } else if (turn == 2) {
-                cpuPoints++
-                tv_p2!!.text = "P2: $cpuPoints"
-            }*/
+
         } else {
             question1!!.setImageResource(R.drawable.cartajuego)
             question2!!.setImageResource(R.drawable.cartajuego)
@@ -303,6 +342,8 @@ class JuegoMemoryActivity : AppCompatActivity() {
                 tv_p1!!.setTextColor(Color.GRAY)
                 tv_p2!!.setTextColor(Color.BLUE)
             }*/
+
+
         }
         question1!!.isEnabled = true
         question2!!.isEnabled = true
@@ -316,42 +357,100 @@ class JuegoMemoryActivity : AppCompatActivity() {
         question10!!.isEnabled = true
         question11!!.isEnabled = true
         question12!!.isEnabled = true
-
+        stopSounds()
         checkEnd();
+    }
+
+    private fun stopSounds(){
+        if(mediaPlayer101.isPlaying){
+            mediaPlayer101.pause()
+        }
+        if(mediaPlayer102.isPlaying){
+            mediaPlayer102.pause()
+        }
+        if(mediaPlayer103.isPlaying){
+            mediaPlayer103.pause()
+        }
+        if(mediaPlayer104.isPlaying){
+            mediaPlayer104.pause()
+        }
+        if(mediaPlayer105.isPlaying){
+            mediaPlayer105.pause()
+        }
+        if(mediaPlayer106.isPlaying){
+            mediaPlayer106.pause()
+        }
+
     }
 
     private fun checkEnd() {
         if (question1!!.visibility == View.INVISIBLE && question2!!.visibility == View.INVISIBLE && question3!!.visibility == View.INVISIBLE && question4!!.visibility == View.INVISIBLE && question5!!.visibility == View.INVISIBLE && question6!!.visibility == View.INVISIBLE && question7!!.visibility == View.INVISIBLE && question8!!.visibility == View.INVISIBLE && question9!!.visibility == View.INVISIBLE && question10!!.visibility == View.INVISIBLE && question11!!.visibility == View.INVISIBLE && question12!!.visibility == View.INVISIBLE) {
-            val alertDialogBuilder = AlertDialog.Builder(this@JuegoMemoryActivity)
-            alertDialogBuilder
-                .setMessage("CONGRATULATIONS!!!")
-                .setCancelable(false)
-                .setPositiveButton("NEW") { dialogInterface, i ->
-                    val intent = Intent(applicationContext, JuegoMemoryActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-                .setNegativeButton("EXIT") { dialogInterface, i -> finish() }
-            val alertDialog = alertDialogBuilder.create()
-            alertDialog.show()
+
+            val botonBien2 = findViewById<ImageView>(R.id.imageOk)
+            botonBien2.visibility = View.VISIBLE
+
+            val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido3)
+            botonRecarga.visibility = View.VISIBLE
+
         }
     }
 
     private fun frontOfCardsResources() {
+
+      //  val sonidos = mutableListOf(sPerro,sGato,sPato,sOveja,sVaca,sBurro,sCerdo,sGallo)
+
         image101 = R.drawable.dogcard
+        mediaPlayer101 = MediaPlayer.create(this, sPerro)
+
         image102 = R.drawable.catcard
+        mediaPlayer102 = MediaPlayer.create(this, sGato)
+
         image103 = R.drawable.cowcard
+        mediaPlayer103 = MediaPlayer.create(this, sVaca)
+
         image104 = R.drawable.duckcard
+        mediaPlayer104 = MediaPlayer.create(this, sPato)
+
         image105 = R.drawable.chickencard
+        mediaPlayer105 = MediaPlayer.create(this, sGallo)
+
         image106 = R.drawable.sheepcard
+        mediaPlayer106 = MediaPlayer.create(this, sOveja)
+
         image201 = R.drawable.dogcard
+        mediaPlayer201 = MediaPlayer.create(this, sPerro)
+
         image202 = R.drawable.catcard
+        mediaPlayer202 = MediaPlayer.create(this, sGato)
+
         image203 = R.drawable.cowcard
+        mediaPlayer203 = MediaPlayer.create(this, sVaca)
+
         image204 = R.drawable.duckcard
+        mediaPlayer204 = MediaPlayer.create(this, sPato)
+
         image205 = R.drawable.chickencard
+        mediaPlayer205 = MediaPlayer.create(this, sGallo)
+
         image206 = R.drawable.sheepcard
+        mediaPlayer206 = MediaPlayer.create(this, sOveja)
+
+
     }
     fun returnVolver(view: View){
+        mediaPlayer101.stop()
+        mediaPlayer102.stop()
+        mediaPlayer103.stop()
+        mediaPlayer104.stop()
+        mediaPlayer105.stop()
+        mediaPlayer106.stop()
+
+        mediaPlayer201.stop()
+        mediaPlayer202.stop()
+        mediaPlayer203.stop()
+        mediaPlayer204.stop()
+        mediaPlayer205.stop()
+        mediaPlayer206.stop()
         irPantallaMenuJuegos()
     }
 
@@ -360,5 +459,9 @@ class JuegoMemoryActivity : AppCompatActivity() {
         startActivity(pantallaMenuJuegos)
         mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo)
         mediaPlayer.start()
+    }
+    fun recargaDePantalla(view: View){
+        val pantallaJuegoMemoria = Intent ( this, JuegoMemoryActivity::class.java)
+        startActivity(pantallaJuegoMemoria)
     }
 }

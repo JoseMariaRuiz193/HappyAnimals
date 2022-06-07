@@ -18,7 +18,11 @@ class TeoriaSonidos : Activity() {
 
     private lateinit var playButton: ImageButton
     private lateinit var playButton2: ImageButton
+    private lateinit var playButton3: ImageButton
     private lateinit var mediaPlayer: MediaPlayer
+   private lateinit var mediaPlayer2: MediaPlayer
+    private lateinit var mediaPlayer3: MediaPlayer
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +30,16 @@ class TeoriaSonidos : Activity() {
         val img= findViewById<ImageButton>(R.id.playButton)
         val cajaNombre = findViewById<ImageView>(R.id.textViewNombreAnimal)
         var sonidoRecogido = 0
+        var soundVoz = 0
+        var coupleSound = 0
         val extras = intent.getExtras()
         if(extras !=null ){
             val last_pictures : Int = extras?.getInt("data")!!
             val last_pictures2 : Int = extras?.getInt("nombresAnimals")!!
             val transName : String = extras?.getString( "data2", "")!!
             sonidoRecogido = extras?.getInt( "sonido", 0)!!
+            soundVoz = extras?.getInt( "soundVoz", 0)!!
+            coupleSound = extras?.getInt( "coupleSound", 0)!!
            // val nombreAnimal : String = extras?.getString( "nombresAnimals", "")
             if(last_pictures != null && transName != "" && last_pictures2 !=null){
                 img.setImageResource(last_pictures)
@@ -42,15 +50,20 @@ class TeoriaSonidos : Activity() {
         }
         playButton = findViewById(R.id.playButton)
         if(sonidoRecogido != 0)
-            mediaPlayer = MediaPlayer.create(this, sonidoRecogido)
+            mediaPlayer3 = MediaPlayer.create(this, sonidoRecogido)
 
         setOnClickListeners(this)
 
         playButton2 = findViewById(R.id.volumenButton)
-        if(sonidoRecogido != 0)
-            mediaPlayer = MediaPlayer.create(this, sonidoRecogido)
+        if(coupleSound != 0)
+            mediaPlayer = MediaPlayer.create(this, coupleSound)
 
         setOnClickListeners2(this)
+
+        playButton3 = findViewById(R.id.playButton3)
+        if(soundVoz != 0)
+            mediaPlayer2 = MediaPlayer.create(this, soundVoz)
+        setOnClickListeners3(this)
         //supportActionBar?.hide()
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
@@ -67,7 +80,7 @@ class TeoriaSonidos : Activity() {
     }
     private fun setOnClickListeners(context: Context) {
        playButton.setOnClickListener {
-            mediaPlayer.start()
+            mediaPlayer3.start()
 
         }
 
@@ -82,7 +95,14 @@ class TeoriaSonidos : Activity() {
 
 
     }
+   fun setOnClickListeners3(context: Context) {
+        playButton3.setOnClickListener {
+            mediaPlayer2.start()
 
+        }
+
+
+    }
     fun returnVolver(view: View){
         onBackPressed()
 

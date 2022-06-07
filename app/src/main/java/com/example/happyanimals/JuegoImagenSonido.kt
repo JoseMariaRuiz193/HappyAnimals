@@ -14,8 +14,10 @@ import androidx.appcompat.app.AlertDialog
 
 class JuegoImagenSonido : AppCompatActivity() {
 
-    private lateinit var playButton: ImageButton
+   // private lateinit var playButton: ImageButton
     private lateinit var mediaPlayer2: MediaPlayer
+    private lateinit var mediaPlayerGood: MediaPlayer
+    private lateinit var mediaPlayerBad: MediaPlayer
     //Imagenes animales recogidas en variables
     val i1 = R.drawable.burro
     val i2 = R.drawable.gato
@@ -42,36 +44,71 @@ class JuegoImagenSonido : AppCompatActivity() {
         supportActionBar?.hide()
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         crearJuego()
+        mediaPlayer2.start()
         val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido2)
         botonRecarga.visibility = View.INVISIBLE
     }
 
     private fun error() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("ERROR")
-        builder.setMessage("CASIIIIIIIIIIIIIII")
+        /*val builder = AlertDialog.Builder(this)
+        builder.setTitle("INCORRECTO")
+        builder.setMessage("PRUEBA OTRA VEZ")
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog = builder.create()
-        dialog.show()
+        dialog.show()*/
+        mediaPlayerBad = MediaPlayer.create(this, R.raw.soundbad)
+        mediaPlayerBad.start()
+
     }
 
     private fun acierto() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("SUUUUUU")
-        builder.setMessage("SUUUUUUUUUUUUU")
+        /*val builder = AlertDialog.Builder(this)
+        builder.setTitle("CORRECTO")
+        builder.setMessage("HAS ACERTADO!")
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog = builder.create()
-        dialog.show()
+        dialog.show()*/
+
+        mediaPlayerGood = MediaPlayer.create(this, R.raw.soundgood)
+        mediaPlayerGood.start()
+        val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido2)
+        botonRecarga.visibility = View.VISIBLE
+        val botonAudio = findViewById<ImageButton>(R.id.preguntasonido)
+        botonAudio.visibility = View.INVISIBLE
     }
 
     private fun crearJuego() {
         val imagenes = mutableListOf(i1,i2,i3,i4,i5,i6,i7,i8)
         val sonidos = mutableListOf(s1,s2,s3,s4,s5,s6,s7,s8)
-        //Relacion sonido con animal
-        /*
-        val (sburro, iburro) = Pair(sonidoBurro, imagenBurro)
-        println(sburro)
-        println(iburro)*/
+
+        //ocultar boton de recarga de pantalla
+        val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido2)
+        botonRecarga.visibility = View.INVISIBLE
+
+        val botonAudio = findViewById<ImageButton>(R.id.preguntasonido)
+        botonAudio.visibility = View.VISIBLE
+
+        //ocultar imagenes bien y mal
+
+        val botonBien1 = findViewById<ImageView>(R.id.imageOk1)
+        botonBien1.visibility = View.INVISIBLE
+
+        val botonBien2 = findViewById<ImageView>(R.id.imageOk2)
+        botonBien2.visibility = View.INVISIBLE
+
+        val botonBien3 = findViewById<ImageView>(R.id.imageOk3)
+        botonBien3.visibility = View.INVISIBLE
+
+        val botonMal1 = findViewById<ImageView>(R.id.imageNo1)
+        botonMal1.visibility = View.INVISIBLE
+
+        val botonMal2 = findViewById<ImageView>(R.id.imageNo2)
+        botonMal2.visibility = View.INVISIBLE
+
+
+        val botonMal3 = findViewById<ImageView>(R.id.imageNo3)
+        botonMal3.visibility = View.INVISIBLE
+
 
         //coger sonido aleatorio y colocarlo
 
@@ -124,31 +161,38 @@ class JuegoImagenSonido : AppCompatActivity() {
         opcion1.setOnClickListener{
             if (opcioncogida==opcion1){
                 acierto()
-                crearJuego()
+                val botonBien1 = findViewById<ImageView>(R.id.imageOk1)
+                botonBien1.visibility = View.VISIBLE
+                //crearJuego()
 
             }else{
                 error()
-
+                val botonMal1 = findViewById<ImageView>(R.id.imageNo1)
+                botonMal1.visibility = View.VISIBLE
             }
         }
         opcion2.setOnClickListener{
             if (opcioncogida==opcion2){
                 acierto()
-
-                crearJuego()
+                val botonBien2 = findViewById<ImageView>(R.id.imageOk2)
+                botonBien2.visibility = View.VISIBLE
+                //crearJuego()
             }else{
                 error()
-
+                val botonMal2 = findViewById<ImageView>(R.id.imageNo2)
+                botonMal2.visibility = View.VISIBLE
             }
         }
         opcion3.setOnClickListener{
             if (opcioncogida==opcion3){
                 acierto()
-                val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido2)
-                botonRecarga.visibility = View.VISIBLE
-                crearJuego()
+                val botonBien3 = findViewById<ImageView>(R.id.imageOk3)
+                botonBien3.visibility = View.VISIBLE
+            //crearJuego()
             }else{
                 error()
+                val botonMal3 = findViewById<ImageView>(R.id.imageNo3)
+                botonMal3.visibility = View.VISIBLE
             }
         }
 
@@ -156,9 +200,13 @@ class JuegoImagenSonido : AppCompatActivity() {
 
     fun recargaDePantalla(view: View){
         crearJuego()
+        mediaPlayer2.start()
     }
 
     fun returnVolver(view: View){
+        mediaPlayerBad.stop()
+        mediaPlayerGood.stop()
+        mediaPlayer2.stop()
         irPantallaMenuJuegos()
     }
 
