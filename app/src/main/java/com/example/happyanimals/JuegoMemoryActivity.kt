@@ -13,6 +13,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import java.util.*
+import kotlin.random.Random
 
 
 class JuegoMemoryActivity : AppCompatActivity() {
@@ -35,6 +36,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
     var question12: ImageView? = null
 
     //array de imagenes
+   // var cartasArray1 =
     var cartasArray = arrayOf(101, 102, 103, 104, 105, 106, 201, 202, 203, 204, 205, 206)
 
     //imagenes actuales
@@ -59,14 +61,14 @@ class JuegoMemoryActivity : AppCompatActivity() {
  //   var playerPoints = 0
   //  var cpuPoints = 0
    //Sonidos animales recogidos en variables
-   val sBurro = R.raw.burro
+//   val sBurro = R.raw.burro
     val sGato = R.raw.gato
     val sPerro = R.raw.perro
     val sOveja = R.raw.oveja
     val sGallo = R.raw.gallo
     val sPato = R.raw.pato
     val sVaca = R.raw.vaca
-    val sCerdo = R.raw.cerdo
+  //  val sCerdo = R.raw.cerdo
 
     private lateinit var mediaPlayer101: MediaPlayer
     private lateinit var mediaPlayer102: MediaPlayer
@@ -91,6 +93,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
        // tv_p1 = findViewById<View>(R.id.tv_p1) as TextView
        // tv_p2 = findViewById<View>(R.id.tv_p2) as TextView
+        cartasArray.shuffle()
         crearJuego()
 
         val botonRecarga = findViewById<ImageButton>(R.id.preguntasonido3)
@@ -99,6 +102,18 @@ class JuegoMemoryActivity : AppCompatActivity() {
     }
 
     private fun crearJuego(){
+
+     /*   val rndn = (1..7).random()
+        //barajar imagenes
+
+        for(i in 0..rndn){
+            cartasArray.shuffle()
+        }*/
+
+
+
+
+
         question1 = findViewById<View>(R.id.question1) as ImageView
         question2 = findViewById<View>(R.id.question2) as ImageView
         question3 = findViewById<View>(R.id.question3) as ImageView
@@ -127,8 +142,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
         //cargar las imagenes de las cartas
         frontOfCardsResources()
 
-        //barajar imagenes
-        cartasArray.shuffle()
+
 
 
         question1!!.setOnClickListener { v ->
@@ -451,6 +465,7 @@ class JuegoMemoryActivity : AppCompatActivity() {
         mediaPlayer204.stop()
         mediaPlayer205.stop()
         mediaPlayer206.stop()
+
         irPantallaMenuJuegos()
     }
 
@@ -464,4 +479,6 @@ class JuegoMemoryActivity : AppCompatActivity() {
         val pantallaJuegoMemoria = Intent ( this, JuegoMemoryActivity::class.java)
         startActivity(pantallaJuegoMemoria)
     }
+
+
 }

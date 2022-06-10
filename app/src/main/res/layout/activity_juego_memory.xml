@@ -173,10 +173,10 @@
 
     <ImageView
         android:id="@+id/imageOk"
-        android:layout_width="570dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="610dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="108dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
         android:visibility="invisible"

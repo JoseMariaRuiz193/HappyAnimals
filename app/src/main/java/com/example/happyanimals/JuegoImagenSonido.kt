@@ -50,24 +50,13 @@ class JuegoImagenSonido : AppCompatActivity() {
     }
 
     private fun error() {
-        /*val builder = AlertDialog.Builder(this)
-        builder.setTitle("INCORRECTO")
-        builder.setMessage("PRUEBA OTRA VEZ")
-        builder.setPositiveButton("Aceptar",null)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()*/
+
         mediaPlayerBad = MediaPlayer.create(this, R.raw.soundbad)
         mediaPlayerBad.start()
 
     }
 
     private fun acierto() {
-        /*val builder = AlertDialog.Builder(this)
-        builder.setTitle("CORRECTO")
-        builder.setMessage("HAS ACERTADO!")
-        builder.setPositiveButton("Aceptar",null)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()*/
 
         mediaPlayerGood = MediaPlayer.create(this, R.raw.soundgood)
         mediaPlayerGood.start()

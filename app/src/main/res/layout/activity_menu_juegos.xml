@@ -25,10 +25,10 @@
 
     <ImageButton
         android:id="@+id/imageButtonMemory"
-        android:layout_width="211dp"
-        android:layout_height="278dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="240dp"
+        android:layout_height="235dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="128dp"
         android:background="@android:color/transparent"
         android:contentDescription="juegomemoriaboton"
         android:onClick="onClickJuegoMemory"
@@ -40,9 +40,9 @@
     <ImageButton
         android:id="@+id/imageButtonNumeros"
         android:layout_width="220dp"
-        android:layout_height="326dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="97dp"
+        android:layout_height="325dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="112dp"
         android:background="@android:color/transparent"
         android:contentDescription="juegonumeros"
         android:onClick="onClickJuegoImagenSonido"

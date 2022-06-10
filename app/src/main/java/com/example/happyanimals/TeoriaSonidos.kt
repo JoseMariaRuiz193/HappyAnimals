@@ -11,6 +11,7 @@ import android.view.WindowManager
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 
 
 class TeoriaSonidos : Activity() {
@@ -20,7 +21,7 @@ class TeoriaSonidos : Activity() {
     private lateinit var playButton2: ImageButton
     private lateinit var playButton3: ImageButton
     private lateinit var mediaPlayer: MediaPlayer
-   private lateinit var mediaPlayer2: MediaPlayer
+    private lateinit var mediaPlayer2: MediaPlayer
     private lateinit var mediaPlayer3: MediaPlayer
 
 
@@ -32,6 +33,8 @@ class TeoriaSonidos : Activity() {
         var sonidoRecogido = 0
         var soundVoz = 0
         var coupleSound = 0
+        val onoSound = findViewById<ImageView>(R.id.textViewOnoSound)
+        onoSound.visibility = View.INVISIBLE
         val extras = intent.getExtras()
         if(extras !=null ){
             val last_pictures : Int = extras?.getInt("data")!!
@@ -40,10 +43,12 @@ class TeoriaSonidos : Activity() {
             sonidoRecogido = extras?.getInt( "sonido", 0)!!
             soundVoz = extras?.getInt( "soundVoz", 0)!!
             coupleSound = extras?.getInt( "coupleSound", 0)!!
+            val onoEnglish : Int = extras?.getInt("onoEnglish")!!
            // val nombreAnimal : String = extras?.getString( "nombresAnimals", "")
             if(last_pictures != null && transName != "" && last_pictures2 !=null){
                 img.setImageResource(last_pictures)
                 cajaNombre.setImageResource(last_pictures2)
+                onoSound.setImageResource(onoEnglish)
             }
 
             img.transitionName = transName
@@ -55,8 +60,14 @@ class TeoriaSonidos : Activity() {
         setOnClickListeners(this)
 
         playButton2 = findViewById(R.id.volumenButton)
-        if(coupleSound != 0)
+        playButton2.setImageResource(R.drawable.sound);
+        if(coupleSound != 0){
             mediaPlayer = MediaPlayer.create(this, coupleSound)
+        }
+
+        // cualquier gif
+//        Glide.with(this).load(R.drawable.biden).into(playButton2)
+
 
         setOnClickListeners2(this)
 
@@ -77,11 +88,17 @@ class TeoriaSonidos : Activity() {
 
         window.setLayout(ancho.toInt(), alto.toInt())
 
+
+
     }
     private fun setOnClickListeners(context: Context) {
        playButton.setOnClickListener {
             mediaPlayer3.start()
+           if (mediaPlayer3.isPlaying== true){
 
+               val onoSound = findViewById<ImageView>(R.id.textViewOnoSound)
+               onoSound.visibility = View.VISIBLE
+           }
         }
 
 
@@ -90,7 +107,20 @@ class TeoriaSonidos : Activity() {
     private fun setOnClickListeners2(context: Context) {
         playButton2.setOnClickListener {
             mediaPlayer.start()
+            val onoSound = findViewById<ImageView>(R.id.textViewOnoSound)
+            if (mediaPlayer.isPlaying== true){
+                // Aqui cuando suena
+                onoSound.visibility = View.VISIBLE
+                Glide.with(this).load(R.drawable.biden).into(playButton2)
+              //  Glide.with(this).load(R.drawable.piggif).into(playButton)
+            }
 
+            // Aqui cuando termina de sonar
+            mediaPlayer.setOnCompletionListener {
+                playButton2.setImageResource(R.drawable.sound);
+          //      playButton.setImageResource(R.drawable.cerdo);
+                onoSound.visibility = View.INVISIBLE
+            }
         }
 
 
